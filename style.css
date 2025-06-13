@@ -223,6 +223,43 @@ input {
   cursor: pointer;
 }
 
+/* Fastfetch Styles */
+.fastfetch-container {
+  margin: 10px 0 20px 0;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.fastfetch-line {
+  display: flex;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.fastfetch-logo-blue {
+  color: var(--ctp-blue);
+  font-weight: bold;
+}
+
+.fastfetch-logo-spacer {
+  opacity: 0;
+}
+
+.fastfetch-separator {
+  margin: 0 10px;
+}
+
+.fastfetch-label {
+  color: var(--ctp-mauve);
+  font-weight: bold;
+  width: 80px;
+  display: inline-block;
+}
+
+.fastfetch-value {
+  color: var(--ctp-text);
+}
+
 /* Selection */
 ::selection {
   background: var(--ctp-surface0);

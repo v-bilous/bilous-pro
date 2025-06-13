@@ -349,6 +349,60 @@ function scrollToBottom() {
   terminalContent.scrollTop = terminalContent.scrollHeight;
 }
 
+// Generate fastfetch-like display
+function generateFastfetch() {
+  // ASCII art logo (simplified arch-like logo)
+  const logo = [
+    '<span class="fastfetch-logo-blue">       /\\       </span>',
+    '<span class="fastfetch-logo-blue">      /  \\      </span>',
+    '<span class="fastfetch-logo-blue">     /\\   \\     </span>',
+    '<span class="fastfetch-logo-blue">    /      \\    </span>',
+    '<span class="fastfetch-logo-blue">   /   ,,   \\   </span>',
+    '<span class="fastfetch-logo-blue">  /   |  |  -\\  </span>',
+    '<span class="fastfetch-logo-blue"> /_-\\"    \\"-_\\ </span>',
+  ];
+
+  // Information items with different colors
+  const info = [
+    '<span class="fastfetch-label">name</span>     <span class="fastfetch-value">Vova Bilous</span>',
+    '<span class="fastfetch-label">role</span>     <span class="fastfetch-value">Principal Software Engineer</span>',
+    '<span class="fastfetch-label">email</span>    <span class="fastfetch-value">vova@bilous.pro</span>',
+    '<span class="fastfetch-label">github</span>   <span class="fastfetch-value">github.com/v-bilous</span>',
+    '<span class="fastfetch-label">langs</span>    <span class="fastfetch-value">Java, Kotlin, TypeScript, Python, Bash</span>',
+    '<span class="fastfetch-label">tools</span>    <span class="fastfetch-value">Neovim, Zellij, Git, IntelliJ IDEA, Arch</span>',
+  ];
+
+  // Combine logo and info
+  let result = '<div class="fastfetch-container">';
+
+  // Calculate the maximum number of lines
+  const maxLines = Math.max(logo.length, info.length);
+
+  for (let i = 0; i < maxLines; i++) {
+    result += '<div class="fastfetch-line">';
+
+    // Add logo part if available
+    if (i < logo.length) {
+      result += logo[i];
+    } else {
+      result += '<span class="fastfetch-logo-spacer">              </span>';
+    }
+
+    // Add separator
+    result += '<span class="fastfetch-separator">  </span>';
+
+    // Add info part if available
+    if (i < info.length) {
+      result += info[i];
+    }
+
+    result += "</div>";
+  }
+
+  result += "</div>";
+  return result;
+}
+
 // Initialize terminal on page load
 document.addEventListener("DOMContentLoaded", () => {
   initTerminal();
@@ -359,6 +413,9 @@ document.addEventListener("DOMContentLoaded", () => {
       el.classList.add("error");
     }
   });
+
+  // Display fastfetch-like component
+  appendToOutput(generateFastfetch());
 
   // Add animation effect to terminal on load
   setTimeout(() => {
