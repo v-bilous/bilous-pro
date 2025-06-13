@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Vova Bilous - Principal Software Engineer - Personal Terminal Website"
+    />
+    <meta
+      name="keywords"
+      content="software engineer, developer, java, kotlin, terminal, portfolio"
+    />
+    <meta name="author" content="Vova Bilous" />
+    <meta name="theme-color" content="#1e1e2e" />
+    <title>Vova Bilous | bilous.pro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>"
+    />
+  </head>
+  <body>
+    <main id="terminal">
+      <header class="terminal-header">
+        <div class="terminal-title-bar">
+          <span class="terminal-title">vova@bilous.pro: ~</span>
+          <div class="terminal-controls">
+            <span class="control minimize"></span>
+            <span class="control maximize"></span>
+            <span class="control close"></span>
+          </div>
+        </div>
+      </header>
+      <section class="terminal-content">
+        <pre id="output" aria-live="polite">
+Welcome to bilous.pro terminal!
+Type 'help' to see available commands.
+</pre
+        >
+        <div class="input-line">
+          <span class="prompt">vova@bilous.pro ~$</span>
+          <input
+            type="text"
+            id="input"
+            aria-label="Terminal input"
+            autofocus
+            spellcheck="false"
+            autocomplete="off"
+          />
+        </div>
+      </section>
+      <footer class="terminal-footer">
+        <p>
+          © <span id="current-year"></span> Vova Bilous |
+          <a
+            href="https://github.com/v-bilous"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+        </p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

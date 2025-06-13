@@ -1,0 +1,250 @@
+/* Catppuccin Mocha Theme Colors */
+:root {
+  --ctp-base: #1e1e2e;
+  --ctp-mantle: #181825;
+  --ctp-crust: #11111b;
+  --ctp-text: #cdd6f4;
+  --ctp-subtext0: #a6adc8;
+  --ctp-subtext1: #bac2de;
+  --ctp-surface0: #313244;
+  --ctp-surface1: #45475a;
+  --ctp-surface2: #585b70;
+  --ctp-overlay0: #6c7086;
+  --ctp-overlay1: #7f849c;
+  --ctp-overlay2: #9399b2;
+  --ctp-blue: #89b4fa;
+  --ctp-lavender: #b4befe;
+  --ctp-sapphire: #74c7ec;
+  --ctp-sky: #89dceb;
+  --ctp-teal: #94e2d5;
+  --ctp-green: #a6e3a1;
+  --ctp-yellow: #f9e2af;
+  --ctp-peach: #fab387;
+  --ctp-maroon: #eba0ac;
+  --ctp-red: #f38ba8;
+  --ctp-mauve: #cba6f7;
+  --ctp-pink: #f5c2e7;
+  --ctp-flamingo: #f2cdcd;
+  --ctp-rosewater: #f5e0dc;
+}
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--ctp-base);
+  color: var(--ctp-text);
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Menlo', 'Monaco', 'Consolas', monospace;
+  line-height: 1.5;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Terminal Styles */
+#terminal {
+  background-color: var(--ctp-mantle);
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--ctp-surface0);
+  transition: all 0.3s ease;
+}
+
+/* Terminal states */
+#terminal {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#terminal.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#terminal.closed {
+  opacity: 0;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+#terminal.minimized {
+  transform: translateY(calc(100% - 40px));
+}
+
+#terminal.maximized {
+  max-width: 100%;
+  height: 100vh;
+  border-radius: 0;
+}
+
+/* Terminal Header */
+.terminal-header {
+  background-color: var(--ctp-surface0);
+  padding: 8px 12px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  user-select: none;
+}
+
+.terminal-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terminal-title {
+  color: var(--ctp-subtext0);
+  font-size: 0.9rem;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.control {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.minimize {
+  background-color: var(--ctp-yellow);
+}
+
+.maximize {
+  background-color: var(--ctp-green);
+}
+
+.close {
+  background-color: var(--ctp-red);
+}
+
+/* Terminal Content */
+.terminal-content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#output {
+  white-space: pre-wrap;
+  margin-bottom: 16px;
+  flex: 1;
+  overflow-y: auto;
+  color: var(--ctp-text);
+  font-size: 0.95rem;
+}
+
+.input-line {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.prompt {
+  color: var(--ctp-blue);
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+input {
+  background: none;
+  border: none;
+  color: var(--ctp-text);
+  font: inherit;
+  flex: 1;
+  outline: none;
+  caret-color: var(--ctp-mauve);
+}
+
+/* Terminal Footer */
+.terminal-footer {
+  background-color: var(--ctp-surface0);
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ctp-subtext0);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.terminal-footer a {
+  color: var(--ctp-blue);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.terminal-footer a:hover {
+  color: var(--ctp-lavender);
+  text-decoration: underline;
+}
+
+/* Command Styling */
+.command {
+  color: var(--ctp-green);
+}
+
+.error {
+  color: var(--ctp-red);
+}
+
+.success {
+  color: var(--ctp-green);
+}
+
+.info {
+  color: var(--ctp-yellow);
+}
+
+.link {
+  color: var(--ctp-blue);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Selection */
+::selection {
+  background: var(--ctp-surface0);
+  color: var(--ctp-text);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5rem;
+  }
+
+  #terminal {
+    height: 90vh;
+    width: 100%;
+  }
+
+  .terminal-title {
+    font-size: 0.8rem;
+  }
+
+  #output, input {
+    font-size: 0.9rem;
+  }
+}

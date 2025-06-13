@@ -1,0 +1,60 @@
+# .gitignore for bilous.pro terminal-style website
+
+# IDE - IntelliJ IDEA, WebStorm, etc.
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+# OS specific files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories (if you add npm/yarn in the future)
+node_modules/
+jspm_packages/
+
+# Build outputs (if you add a build process in the future)
+dist/
+build/
+out/
+.tmp/
+.temp/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Editor configs
+.vscode/
+.editorconfig
+
+# Cache directories
+.cache/
+.npm/
+.eslintcache
+
+# Coverage directories
+coverage/
+.nyc_output/
+
+# Misc
+*.swp
+*.swo
+.lock-wscript
