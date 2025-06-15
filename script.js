@@ -184,39 +184,45 @@ Type <span class="command">stack</span> to see my technical skills.`;
     execute: () => {
       return `<span class="info">Technical Stack:</span>
 
-<span class="success">Languages:</span> Java, Kotlin, JavaScript, TypeScript, SQL
+<span class="success">Languages:</span> Java, Kotlin, JavaScript, TypeScript, Python, Bash, SQL
 
-<span class="success">Frameworks:</span> Spring Boot, Spring Cloud, React, Node.js
+<span class="success">Frameworks:</span> Spring Boot, Quarkus, React, Node.js
 
 <span class="success">Data:</span> PostgreSQL, Redis, Kafka, Elasticsearch, MongoDB
 
 <span class="success">Cloud:</span> AWS, Docker, Kubernetes, Terraform
 
-<span class="success">Tools:</span> Neovim, Zellij, Git, IntelliJ IDEA, Linux
+<span class="success">Tools:</span> Neovim, Zellij, Git, IntelliJ IDEA, Arch
 
 <span class="success">Practices:</span> TDD, CI/CD, Microservices, Event-Driven Architecture`;
     },
   },
 
-  projects: {
-    description: "View notable projects",
+  services: {
+    description: "Explore professional services offered",
     execute: () => {
-      return `<span class="info">Notable Projects:</span>
+      return `<span class="info">Services:</span>
 
-<span class="success">Multi-currency Crypto Payment System</span>
-- Scalable payment processing platform
-- Handling thousands of transactions per second
-- Secure wallet management and exchange integration
+<span class="success">🧠 Architecture & Design</span>
+- Design scalable, cloud-native systems
+- Domain-driven design, API-first, microservices
 
-<span class="success">Cloud-native API-first Codegen Framework</span>
-- Automated code generation from API specifications
-- Reduced development time by 40%
-- Consistent API implementation across services
+<span class="success">🚀 Platform Engineering</span>
+- CI/CD pipelines, Infrastructure as Code
+- Observability, monitoring, production readiness
 
-<span class="success">Real-time Telemetry and Streaming Platform</span>
-- IoT data collection and analysis
-- Low-latency event processing
-- Visualization and alerting system`;
+<span class="success">💡 Technical Leadership</span>
+- Team mentoring & tech strategy
+- Aligning business goals with engineering delivery
+
+<span class="success">💳 Payments & Fintech</span>
+- Multi-currency payment systems (incl. crypto)
+- Secure, high-throughput transaction pipelines
+
+<span class="success">📦 Code Generation & API Design</span>
+- Metadata-driven architecture
+- AsyncAPI, OpenAPI, internal developer platforms
+`;
     },
   },
 
@@ -266,7 +272,7 @@ Feel free to reach out for collaboration opportunities or just to say hello!`;
   ls: {
     description: "List directory contents",
     execute: () => {
-      return `about.txt  contact.md  experience.log  projects.json  stack.yml`;
+      return `about.txt  contact.md  experience.log  services.json  stack.yml`;
     },
   },
 
@@ -277,7 +283,7 @@ Feel free to reach out for collaboration opportunities or just to say hello!`;
         "about.txt": COMMANDS.about.execute(),
         "contact.md": COMMANDS.contact.execute(),
         "experience.log": COMMANDS.experience.execute(),
-        "projects.json": COMMANDS.projects.execute(),
+        "services.json": COMMANDS.services.execute(),
         "stack.yml": COMMANDS.stack.execute(),
       };
 
@@ -365,7 +371,6 @@ function generateFastfetch() {
   // Information items with different colors
   const info = [
     '<span class="fastfetch-label">name</span>     <span class="fastfetch-value">Vova Bilous</span>',
-    '<span class="fastfetch-label">role</span>     <span class="fastfetch-value">Principal Software Engineer</span>',
     '<span class="fastfetch-label">email</span>    <span class="fastfetch-value">vova@bilous.pro</span>',
     '<span class="fastfetch-label">github</span>   <span class="fastfetch-value">github.com/v-bilous</span>',
     '<span class="fastfetch-label">langs</span>    <span class="fastfetch-value">Java, Kotlin, TypeScript, Python, Bash</span>',
