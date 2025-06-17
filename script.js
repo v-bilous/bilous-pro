@@ -147,12 +147,15 @@ const COMMANDS = {
   about: {
     description: "Display information about Vova Bilous",
     execute: () => {
-      return `<span class="info">Principal Software Engineer with 15+ years of experience.</span>
+      return `<span class="info">I build scalable software systems — from scratch or inside complex infrastructures.</span>
 
-I build scalable systems, mentor teams, and design cloud-native architectures.
-My focus is on creating robust, maintainable software solutions that solve real-world problems.
+My expertise spans software architecture, backend engineering, frontend integration, cloud infrastructure, CI/CD automation, and performance optimization. I work across the full stack — from UI to backend to infrastructure — and integrate financial systems, crypto workflows, and AI-driven tools to create intelligent platforms.
 
-I'm passionate about clean code, performance optimization, and continuous learning.`;
+I manage the entire lifecycle: designing, coding, integrating, automating, and delivering. With or without a team — I handle complex engineering challenges independently and deliver production-grade results.
+
+From e-commerce and telco to fintech, gaming, and IoT — I’ve delivered secure, high-performance systems and introduced company-wide innovations in code generation and developer experience.
+
+I value clarity, pragmatic design, and continuous learning.`;
     },
   },
 
@@ -161,19 +164,23 @@ I'm passionate about clean code, performance optimization, and continuous learni
     execute: () => {
       return `<span class="info">Professional Experience:</span>
 
-Led architecture and development of scalable, high-load platforms in industries including e-commerce, telecom, IoT, healthcare, and gaming.
+Designed and delivered large-scale platforms in e-commerce, telecommunications, IoT, gaming, healthcare, and fintech — working across the full stack from frontend to backend to cloud infrastructure.
 
-Built and optimized distributed systems using Java, Kotlin, and Spring ecosystem with a focus on clean, maintainable code and performance under load.
+Built and optimized distributed systems using Java, Kotlin, and Spring — with a focus on performance, maintainability, and developer experience.
 
-Introduced metadata-driven, API-first development processes with code generation that streamlined delivery across multiple teams.
+Introduced metadata-driven, API-first development practices and created internal code generation frameworks adopted across entire engineering organizations.
 
-Migrated complex on-prem systems to the cloud (AWS), implementing infrastructure-as-code, observability, and CI/CD practices at scale.
+Migrated complex monolithic and on-prem systems to cloud-native environments (AWS), implementing infrastructure-as-code, telemetry, and CI/CD at scale.
 
-Designed multi-currency payment systems with real-time crypto and fiat support, integrating secure and performant transactional pipelines.
+Developed multi-currency payment systems with real-time fiat and crypto support — including secure pipelines, smart routing, and external integrations.
 
-Managed and mentored cross-functional teams (10–30+ engineers), introduced Agile/Scrum frameworks, and drove cultural shifts toward DevOps and automation.
+Implemented full-stack developer tooling, internal platforms, and workflows to accelerate delivery and standardize architecture patterns.
 
-Collaborated directly with stakeholders and executives, aligning technical decisions with business goals and long-term product vision.
+Led and mentored engineering teams (10–20+ people), scaled Agile and DevOps practices, and drove organization-wide initiatives in platform modernization and automation.
+
+Integrated AI-based components and internal tools to automate operations, enhance observability, and enable smart platform behavior.
+
+Collaborated closely with stakeholders, founders, and executives — translating business requirements into scalable, production-grade architecture.
 
 Type <span class="command">stack</span> to see my technical skills.`;
     },
@@ -203,26 +210,27 @@ Type <span class="command">stack</span> to see my technical skills.`;
     execute: () => {
       return `<span class="info">Services:</span>
 
-<span class="success">🧠 Architecture & Design</span>
-- Design scalable, cloud-native systems
-- Domain-driven design, API-first, microservices
+<span class="success">🧠 Full-Stack Architecture</span>
+- From UI to backend to infrastructure
+- Scalable, cloud-native, production-ready systems
 
-<span class="success">🚀 Platform Engineering</span>
-- CI/CD pipelines, Infrastructure as Code
-- Observability, monitoring, production readiness
+<span class="success">🚀 Startup Acceleration</span>
+- From MVP to full product delivery
+- I design, build, and ship end-to-end solutions — solo or with your team
 
-<span class="success">💡 Technical Leadership</span>
-- Team mentoring & tech strategy
-- Aligning business goals with engineering delivery
+<span class="success">🤖 AI & Smart Automation</span>
+- AI-assisted features, LLM integration, internal tools
+- Automate ops, augment UX, and ship smarter platforms
 
-<span class="success">💳 Payments & Fintech</span>
-- Multi-currency payment systems (incl. crypto)
-- Secure, high-throughput transaction pipelines
+<span class="success">💳 Fintech & Payments</span>
+- Multi-currency (incl. crypto), secure transaction pipelines
+- Real-time flows, smart routing, integration with external providers
 
-<span class="success">📦 Code Generation & API Design</span>
-- Metadata-driven architecture
-- AsyncAPI, OpenAPI, internal developer platforms
-`;
+<span class="success">📦 Developer Experience & Codegen</span>
+- API-first systems with OpenAPI/AsyncAPI
+- Internal tooling, metadata-driven architecture, code generation
+
+<span class="info">You bring the idea. I bring the repo, CI, infra, and caffeine. Let's ship.</span>`;
     },
   },
 
